@@ -33,7 +33,7 @@ async def start(client, message):
     await message.reply_text(text, reply_markup=keyboard)
 
 
-@colab_bot.on_message(filters.command("colabxr") & filters.private)
+@colab_bot.on_message(filters.command("m") & filters.private)
 async def colabxr(client, message):
     global BOT, src_request_msg
     text = "<b>◲ Send Me DOWNLOAD LINK(s) 🔗»\n◲</b> <i>You can enter multiple links in new lines and I will download each of them 😉 </i>"
