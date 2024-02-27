@@ -145,7 +145,7 @@ async def archive(path, is_split, remove: bool):
     if len(BOT.Options.custom_name) != 0:
         name = BOT.Options.custom_name
     elif ospath.isfile(path):
-        name = ospath.basename(path)
+        name = ospath.basename(path).split('.')[0]
     else:
         name = Messages.download_name
     Messages.status_head = f"<b>🔐 ZIPPING » </b>\n\n<code>{name}</code>\n"
